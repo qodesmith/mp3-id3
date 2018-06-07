@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+
+  <% if (htmlWebpackPlugin.options.description) { %>
+  <meta name="description" content="<% htmlWebpackPlugin.options.description %>">
+  <% } %>
+
+  <% if (htmlWebpackPlugin.options.mobileThemeColor) { %>
+  <meta name="theme-color" content="<% htmlWebpackPlugin.options.mobileThemeColor %>">
+  <meta name="apple-mobile-web-app-status-bar-style" content="<% htmlWebpackPlugin.options.mobileThemeColor %>">
+  <% } %>
+
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body class="tc">
+  <h1>MP3 ID3 Tag Editor</h1>
+
+  <form>
+    <div class="mb3">
+      <label for="file">Upload your file:</label>
+      <input type="file" id="file" class="ba-1px" accept="audio/mpeg">
+    </div>
+
+    <div class="fields dn">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+      </div>
+      <div>
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist">
+      </div>
+      <div>
+        <label for="album">Album:</label>
+        <input type="text" id="album" name="album">
+      </div>
+      <div>
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
